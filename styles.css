@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#app {
+    max-width: 600px;
+    width: 100%;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.gauge {
+    margin: 20px 0;
+}
+
+.dial {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    position: relative;
+}
+
+.led {
+    width: 20px;
+    height: 20px;
+    margin: 10px auto;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.led.green {
+    background-color: green;
+}
+
+.led.yellow {
+    background-color: yellow;
+}
+
+#battery-dial::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 40%;
+    background-color: #fff;
+    transform-origin: bottom;
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
+}
