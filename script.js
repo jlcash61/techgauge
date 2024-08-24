@@ -29,6 +29,8 @@ if (navigator.getBattery) {
             batteryDial.style.transform = `rotate(${(level * 1.8) - 90}deg)`;
             // Change LED color based on charging status
             batteryLed.className = 'led ' + (isCharging ? 'green' : 'yellow');
+
+            batteryDial.textContent = `${level}% `;
         }
 
         updateBatteryStatus();
